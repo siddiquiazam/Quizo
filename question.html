@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Question</title>
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <script src="jquery/jquery-3.5.1.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <style>
+
+      .align {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         width: 50%;
+         margin-top: 10px;
+         border-radius: 25px;
+      }
+
+      .background {
+         background:url(img/original.jpg) no-repeat -150px -98px;
+         margin: 0;
+      }
+      .align-b {
+         display:flex;
+         flex-direction: row-reverse;
+      }
+
+   </style>
+</head>
+<body class = "background">
+   <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <a class="navbar-brand text-white font-weight-bold" style="font-size: 30px;" href="#">Quizo</a>
+      <div class="collapse navbar-collapse align-b" id="navbarSupportedContent">
+         <ul class="navbar-nav float-right">
+            <li class="nav-item" id = "score">
+               
+            </li>
+            <li class="nav-item">
+               <button id="quit" class="btn btn-light btn-lg">Quit</a>
+            </li>
+         </ul>
+      </div>
+   </nav>
+   <div class="container align bg-light p-4">
+      <div id="question"></div>
+      <div id="options" style = "width:50%; margin-bottom: 20px;"></div>
+      <div id="response"></div>
+      <button id="get-question" class = "btn btn-dark btn-lg" style = "width:12rem">Next</button>
+      <br>
+      <div id="time">
+         <h3 class = "font-weight-bold">Time left: 10</h3>
+      </div>
+      <div  class="progress" style = "width:100%; height: 32px">
+         <div id="progress" class="progress-bar bg-success  progress-bar-animated progress-bar-striped" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style = "width:0%; font-size:20px; font-weight: 800;">
+            0%
+         </div>
+      </div>
+   </div>
+   <script src="js/question.js"></script>
+</body>
+</html>
